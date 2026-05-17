@@ -27,4 +27,4 @@ pip install flask geopandas
 python flask_intro.py
 
 ## Author
-Ottavio Di Thiene — Hamburg, Germany
+Ottavio di Thiene — Hamburg, Germany

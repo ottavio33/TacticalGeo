@@ -1,4 +1,5 @@
-# TacticalGeo 🗺️
+# TacticalGeo <img width="1198" height="856" alt="Screenshot 2026-05-19 224932" src="https://github.com/user-attachments/assets/8c5655a3-55f6-4000-9e64-099e230068c6" />
+
 Geospatial intelligence system for the Strait of Hormuz
 
 ## What it does
@@ -20,7 +21,7 @@ Geospatial intelligence system for the Strait of Hormuz
 Python · GeoPandas · Flask · SQLite · QGIS · GeoJSON
 
 ## Screenshots
-[Coming soon]
+
 
 ## How to run
 pip install flask geopandas

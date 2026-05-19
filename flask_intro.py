@@ -4,7 +4,7 @@ from shapely.geometry import Point
 
 app = Flask(__name__)
 
-# Carica dati reali Hormuz
+
 def get_hormuz_data():
     return [
         {"name": "Bandar Abbas", "lat": 27.1832, "lon": 56.2666, "type": "Naval"},

@@ -3,7 +3,7 @@ from flask_jwt_extended import JWTManager, jwt_required, create_access_token
 
 app = Flask(__name__)
 
-# Chiave segreta — in produzione usa una stringa lunga e casuale
+# Secret Key
 app.config["JWT_SECRET_KEY"] = "tacticalgeo-secret-2026"
 jwt = JWTManager(app)
 
@@ -14,19 +14,19 @@ def login():
     username = dati.get("username")
     password = dati.get("password")
 
-    # Credenziali hardcoded per ora
+    # Credentials hardcoded 
     if username == "ottavio" and password == "hormuz2026":
         token = create_access_token(identity=username)
         return jsonify(token=token)
     
     return jsonify({"error": "credenziali errate"}), 401
 
-# === ROUTE PUBBLICA ===
+# ** Pubblic Route **
 @app.route('/')
 def home():
     return jsonify({"status": "TacticalGeo API online"})
 
-# === ROUTE PROTETTA ===
+# ++ Protected Route ++
 @app.route('/api/bases')
 @jwt_required()
 def get_bases():

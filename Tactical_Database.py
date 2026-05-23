@@ -3,7 +3,7 @@ import sqlite3
 conn = sqlite3.connect("tactical.db")
 cursor = conn.cursor()
 
-# Drop e ricrea tabella pulita
+
 cursor.execute("DROP TABLE IF EXISTS bases")
 cursor.execute("""
     CREATE TABLE bases (
@@ -30,7 +30,7 @@ print("\n--- All bases ---")
 for row in rows:
     print(f"{row[1]} -> lat {row[2]}, type {row[4]}")
 
-# Filter with WHERE
+# with WHERE
 print("\n--- Only Naval bases ---")
 cursor.execute("SELECT name, lat FROM bases WHERE type = 'Naval'")
 rows = cursor.fetchall()

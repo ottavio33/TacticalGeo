@@ -9,12 +9,12 @@ basi = gpd.GeoDataFrame({
     Point(58.3829, 23.5880),
 ], crs="EPSG:4326")
 
-# Converti in metri e crea buffer 200km
+#  buffer 200km
 basi_m = basi.to_crs("EPSG:3857")
 buffers = basi_m.copy()
 buffers["geometry"] = buffers.geometry.buffer(200000)
 
-# Controlla sovrapposizioni
+# Overlap
 print("--- Overlap Analysis ---")
 for i, row1 in buffers.iterrows():
     for j, row2 in buffers.iterrows():

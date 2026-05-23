@@ -1,7 +1,7 @@
 import urllib.request
 import json
 
-# Step 1 - Login e ottieni token
+
 data = json.dumps({"username": "ottavio", "password": "hormuz2026"}).encode()
 req = urllib.request.Request(
     "http://localhost:5000/login",
@@ -15,7 +15,6 @@ with urllib.request.urlopen(req) as response:
     token = result["token"]
     print(f"Token ricevuto: {token[:50]}...")
 
-# Step 2 - Usa il token per accedere ai dati
 req2 = urllib.request.Request(
     "http://localhost:5000/api/bases",
     headers={"Authorization": f"Bearer {token}"}

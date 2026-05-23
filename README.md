@@ -1,5 +1,5 @@
 Geospatial intelligence system for the Strait of Hormuz
-![TacticalGeo Hormuz Map](hormuz_map.png)
+
 ## What it does
 - Processes real geographic data with Python + GeoPandas
 - Generates strategic bases, shipping lanes, buffer zones
@@ -19,6 +19,7 @@ Geospatial intelligence system for the Strait of Hormuz
 Python · GeoPandas · Flask · SQLite · QGIS · GeoJSON
 
 ## Screenshots
+![TacticalGeo Hormuz Map](hormuz_map.png)
 
 
 ## How to run
